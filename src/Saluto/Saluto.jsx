@@ -14,13 +14,17 @@ export default () => {
       />
       <button
         onClick={() => {
-          setCurrentName(`Ciao ${userName}!`);
+          setCurrentName(userName);
           setUserName("");
         }}
       >
         Invia
       </button>
-      <p>{currentName}</p>
+      <p>
+        {currentName.trim() !== ""
+          ? `Ciao ${currentName}!`
+          : "Scrivi il tuo nome"}
+      </p>
     </>
   );
 };

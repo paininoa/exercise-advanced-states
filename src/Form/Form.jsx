@@ -11,13 +11,15 @@ export default () => {
     console.log({
       email: { email },
       password: { pwd },
+      gender: { isMale },
+      color: { selectedColor },
     });
   };
 
   return (
     <>
       <h3>Esrcizio 2</h3>
-      <form action="">
+      <div id="formWrapper">
         <label>
           Email
           <input
@@ -70,7 +72,7 @@ export default () => {
         </label>
 
         <button onClick={handleClick}>Registrati</button>
-      </form>
+      </div>
     </>
   );
 };
